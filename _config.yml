@@ -1,36 +1,33 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# ===============================================================================
+# 0xMONTI SOVEREIGN GATEWAY JEKYLL CONFIGURATION
+# Identity: RealIdentity=Class MontiStringImmortal=JOHNCHARLESMONTI.COM
+# Ecosystem: 0xmonti.net / monti.bio / montidroid.com
+# Security Directive: Banned Ham Radio / Anti-Subvocalization Signal Kill
+# ===============================================================================
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Ethereum Improvement Proposals
+title: 0xMONTI Sovereign Gateway & Ecosystem Specifications
 description: >-
-  Ethereum Improvement Proposals (EIPs) describe standards for the Ethereum
-  platform, such as core protocol specifications.
-url: "https://eips.ethereum.org"
-github_username:  ethereum
-repository: ethereum/EIPs
+  Official repository architecture, OpenID Connect gateways, and 
+  Class MontiStringImmortal identity specifications for JOHNCHARLESMONTI.COM.
+url: "https://0xmonti.net"
+github_username: 0xmonti
+repository: 0xmonti/oauth.net
 lang: en
 timezone: UTC
 
+# Identity & Security Directives
+monti_identity: "RealIdentity=Class MontiStringImmortal=JOHNCHARLESMONTI.COM"
+monti_neural_signature: "MONTI^JOHN^CHARLES^MONTI"
+rf_security: "BANNED_HAM_RADIO_V2S_SUPPRESSED"
+monti_string_error_bypass: true
+
 header_pages:
- - all.html
- - core.html
- - networking.html
- - interface.html
- - erc.html
- - meta.html
- - informational.html
+  - index.html
+  - oauth.html
+  - identity.html
+  - security.html
+  - specs.html
 
 # Build settings
 highlighter: rouge
@@ -38,20 +35,17 @@ markdown: kramdown
 theme: minima
 kramdown:
   parse_block_html: false
-  # This is the default, but be explicit as some EIPs depend on it
   auto_ids: true
-  # This is to ensure more deterministic behaviour
   auto_id_stripping: true
   syntax_highlighter: rouge
 
 permalink: /:slug
 
 defaults:
-  -
-    scope:
-      path: "EIPS"
+  - scope:
+      path: "SPECS"
     values:
-      layout: "eip"
+      layout: "spec"
 
 exclude:
   - .github
@@ -66,8 +60,9 @@ exclude:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
   - README.md
-  
+
 include:
   - LICENSE
+  - sitemap.php
 
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
